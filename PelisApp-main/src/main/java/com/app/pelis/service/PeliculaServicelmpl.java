@@ -11,26 +11,25 @@ import com.app.pelis.mappers.PeliculaMapper;
 import com.app.pelis.model.Pelicula;
 import com.app.pelis.repository.PeliculaRepository;
 
-
 @Service
-public class PeliculaServicelmpl implements PeliculaService{
+public class PeliculaServicelmpl implements PeliculaService {
 
-    @Autowired
-    private  PeliculaRepository peliculaRepository;
+  @Autowired
+  private PeliculaRepository peliculaRepository;
 
-    public List<PeliculaResponseDTO> getAllPeliculas(){
-    List<PeliculaResponseDTO> peliculas  = peliculaRepository.findAll()
-    .stream()
-    .map(PeliculaMapper::toDTO)
-    .toList();
-    
+  public List<PeliculaResponseDTO> getAllPeliculas() {
+    List<PeliculaResponseDTO> peliculas = peliculaRepository.findAll()
+        .stream()
+        .map(PeliculaMapper::toDTO)
+        .toList();
+
     return peliculas;
- }
+  };
 
-public Optional<PeliculaResponseDTO> getPeliculaById(Long id){
+  public Optional<PeliculaResponseDTO> getPeliculaById(Long id) {
     Optional<Pelicula> pelicula = peliculaRepository.findById(id);
     Optional<PeliculaResponseDTO> peliculaDTO = pelicula.map(PeliculaMapper::toDTO);
 
     return peliculaDTO;
-}
+  };
 };

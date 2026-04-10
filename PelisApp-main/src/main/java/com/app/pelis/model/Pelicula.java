@@ -13,23 +13,23 @@ import lombok.Data;
 @Table(name = "pelicula")
 public class Pelicula {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "id")
+  private Long id;
 
-    @Column(name = "titulo")
-    private String titulo;
+  @Column(name = "titulo")
+  private String titulo;
 
-    @Column(name = "año")
-    private int año;
+  @Column(name = "anio")
+  private Integer anio;
 
-    @Column(name = "director")
-    private String director;
+  @Column(name = "director")
+  private String director;
 
-    @Column(name = "genero")
-    private String genero;
+  @Column(name = "genero")
+  private String genero;
 
-    @Column(name = "sinopsis")
-    private String sinopsis;
+  @Column(name = "sinopsis")
+  private String sinopsis;
 }

@@ -8,18 +8,18 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder 
+@Builder
 public class PeliculaResponseDTO {
-    
-    private Long id;
 
-    private String titulo;
+  private Long id;
 
-    private int año;
+  private String titulo;
 
-    private String director;
+  private Integer anio;
 
-    private String genero;
+  private String director;
 
-    private String sinopsis;
+  private String genero;
+
+  private String sinopsis;
 }

@@ -7,11 +7,9 @@ import org.springframework.stereotype.Service;
 
 import com.app.pelis.dto.PeliculaResponseDTO;
 
-
 @Service
 public interface PeliculaService {
   List<PeliculaResponseDTO> getAllPeliculas();
+
   Optional<PeliculaResponseDTO> getPeliculaById(Long id);
-};
-
-
+}
