@@ -10,26 +10,26 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "pelicula")
+@Table(name = "PELICULA")
 public class Pelicula {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "id")
+  @Column(name = "ID")
   private Long id;
 
-  @Column(name = "titulo")
+  @Column(name = "TITULO")
   private String titulo;
 
-  @Column(name = "anio")
+  @Column(name = "ANIO")
   private Integer anio;
 
-  @Column(name = "director")
+  @Column(name = "DIRECTOR")
   private String director;
 
-  @Column(name = "genero")
+  @Column(name = "GENERO")
   private String genero;
 
-  @Column(name = "sinopsis")
+  @Column(name = "SINOPSIS")
   private String sinopsis;
 }
